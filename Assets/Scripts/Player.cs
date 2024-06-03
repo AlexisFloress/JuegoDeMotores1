@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private Vector2 moveInput;
     private Vector3 mousePos;
     private Rigidbody2D rb;
+    private float originalSpeed;
     void Start()
     {
         camaraPrincipal = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -56,5 +57,12 @@ public class Player : MonoBehaviour
         float rotZ = Mathf.Atan2(rotacion.y, rotacion.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0, 0, rotZ - 90);
+    }
+
+    public IEnumerator IncreaseSpeed(float multiplier, float duration)
+    {
+        speed *= multiplier;
+        yield return new WaitForSeconds(duration);
+        speed = originalSpeed;
     }
 }
