@@ -21,6 +21,7 @@ public class Enemy_Bullet : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

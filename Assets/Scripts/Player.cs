@@ -33,13 +33,9 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-               
-            life--;
-            if(life == 0)
-            {
-                Destroy(gameObject);
-                
-            }
+
+            GameManager.Instance.PerderVidas();
+            GameManager.Instance.SiguienteHabitacion();
             Debug.Log("Colision con el enemigo");
         }
     }

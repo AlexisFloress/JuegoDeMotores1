@@ -13,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - mapa
   - 
   - 
   - 
@@ -42,4 +42,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 3210709437
+    locked: 0
+  - name: muros
+    uniqueID: 3835970729
+    locked: 0
+  - name: OverLay
+    uniqueID: 2068759475
     locked: 0
