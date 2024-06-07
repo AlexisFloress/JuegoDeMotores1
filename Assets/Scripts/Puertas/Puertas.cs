@@ -31,7 +31,7 @@ public class Puertas : MonoBehaviour
             case "Puerta 1":
                 habitacionActual = 1;
 
-                habitaciones[1].SetActive(true);
+                habitaciones[habitacionActual].SetActive(true);
 
                 posicionTraslado = habitaciones[habitacionActual].transform.GetChild(0);
                 transform.position = posicionTraslado.transform.position;
@@ -41,30 +41,111 @@ public class Puertas : MonoBehaviour
                 Debug.Log("Estoy dentro de la etiqueta 1");
                 break;
             case "Puerta 2":
+                habitacionActual = 2;
+
+                habitaciones[habitacionActual].SetActive(true);
+
+                posicionTraslado = habitaciones[habitacionActual].transform.GetChild(0);
+                transform.position = posicionTraslado.transform.position;
+                habitaciones[habitacionAnterior].SetActive(false);
+
+                habitacionAnterior = 2;
                 Debug.Log("Estoy dentro de la etiqueta 1");
                 break;
             case "Puerta 3":
+                habitacionActual = 3;
+
+                habitaciones[habitacionActual].SetActive(true);
+
+                posicionTraslado = habitaciones[habitacionActual].transform.GetChild(0);
+                transform.position = posicionTraslado.transform.position;
+                habitaciones[habitacionAnterior].SetActive(false);
+
+                habitacionAnterior = 3;
                 Debug.Log("Estoy dentro de la etiqueta 1");
                 break;
             case "Puerta 4":
+                habitacionActual = 4;
+
+                habitaciones[habitacionActual].SetActive(true);
+
+                posicionTraslado = habitaciones[habitacionActual].transform.GetChild(0);
+                transform.position = posicionTraslado.transform.position;
+                habitaciones[habitacionAnterior].SetActive(false);
+
+                habitacionAnterior = 4;
                 Debug.Log("Estoy dentro de la etiqueta 1");
                 break;
             case "Puerta 5":
+                habitacionActual = 5;
+
+                habitaciones[habitacionActual].SetActive(true);
+
+                posicionTraslado = habitaciones[habitacionActual].transform.GetChild(0);
+                transform.position = posicionTraslado.transform.position;
+                habitaciones[habitacionAnterior].SetActive(false);
+
+                habitacionAnterior = 5;
                 Debug.Log("Estoy dentro de la etiqueta 1");
                 break;
             case "Puerta 6":
+                habitacionActual = 6;
+
+                habitaciones[habitacionActual].SetActive(true);
+
+                posicionTraslado = habitaciones[habitacionActual].transform.GetChild(0);
+                transform.position = posicionTraslado.transform.position;
+                habitaciones[habitacionAnterior].SetActive(false);
+
+                habitacionAnterior = 6;
                 Debug.Log("Estoy dentro de la etiqueta 1");
                 break;
             case "Puerta 7":
+                habitacionActual = 7;
+
+                habitaciones[habitacionActual].SetActive(true);
+
+                posicionTraslado = habitaciones[habitacionActual].transform.GetChild(0);
+                transform.position = posicionTraslado.transform.position;
+                habitaciones[habitacionAnterior].SetActive(false);
+
+                habitacionAnterior = 7;
                 Debug.Log("Estoy dentro de la etiqueta 1");
                 break;
             case "Puerta 8":
+                habitacionActual = 8;
+
+                habitaciones[habitacionActual].SetActive(true);
+
+                posicionTraslado = habitaciones[habitacionActual].transform.GetChild(0);
+                transform.position = posicionTraslado.transform.position;
+                habitaciones[habitacionAnterior].SetActive(false);
+
+                habitacionAnterior = 8;
                 Debug.Log("Estoy dentro de la etiqueta 1");
                 break;
             case "Puerta 9":
+                habitacionActual = 9;
+
+                habitaciones[habitacionActual].SetActive(true);
+
+                posicionTraslado = habitaciones[habitacionActual].transform.GetChild(0);
+                transform.position = posicionTraslado.transform.position;
+                habitaciones[habitacionAnterior].SetActive(false);
+
+                habitacionAnterior = 9;
                 Debug.Log("Estoy dentro de la etiqueta 1");
                 break;
             case "Puerta 10":
+                habitacionActual = 10;
+
+                habitaciones[habitacionActual].SetActive(true);
+
+                posicionTraslado = habitaciones[habitacionActual].transform.GetChild(0);
+                transform.position = posicionTraslado.transform.position;
+                habitaciones[habitacionAnterior].SetActive(false);
+
+                habitacionAnterior = 10;
                 Debug.Log("Estoy dentro de la etiqueta 1");
                 break;
         }
