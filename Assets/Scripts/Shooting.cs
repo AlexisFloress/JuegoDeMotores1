@@ -27,15 +27,7 @@ public class Shooting : MonoBehaviour
         Disparo();
     }
 
-    private void Rotacion()
-    {
-        mousePos = camaraPrincipal.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 rotacion = mousePos - transform.position;
-
-        float rotZ = Mathf.Atan2(rotacion.y, rotacion.x) * Mathf.Rad2Deg;
-
-        transform.rotation = Quaternion.Euler(0, 0, rotZ - 90);
-    }
+    
 
     void Disparo()
     {

@@ -18,6 +18,8 @@ TagManager:
   - Puerta 8
   - Puerta 9
   - Puerta 10
+  - BulletEnemy
+  - Obstaculo
   layers:
   - Default
   - TransparentFX

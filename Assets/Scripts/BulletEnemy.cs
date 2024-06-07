@@ -1,35 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletEnemy : MonoBehaviour
 {
     private Vector3 mousePos;
-    private Camera mainCam;
+    public GameObject player;
     private Rigidbody2D rb;
     public float force;
-    
-    
-    
+
+
+
 
 
     void Start()
     {
-        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = player.transform.position;
         Vector3 direction = mousePos - transform.position;
         Vector3 rotation = mousePos - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rotZ );
+        transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
-        
+
 
     }
     private void Update()
     {
-        
+
     }
 
 
@@ -41,7 +42,7 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject, 3f);
+            Destroy(gameObject,3f);
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") )
         {
 
             GameManager.Instance.PerderVidas();
@@ -39,6 +40,16 @@ public class Player : MonoBehaviour
             Debug.Log("Colision con el enemigo");
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("BulletEnemy"))
+        {
+            GameManager.Instance.PerderVidas();
+            Destroy(collision.gameObject);
+        }
+        Debug.Log("TRIGGER con el enemigo");
+    }
+
     private void move()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
