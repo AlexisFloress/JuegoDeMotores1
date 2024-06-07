@@ -29,7 +29,9 @@ public class GameManager : MonoBehaviour
         overlay.DesactivarVidas(vidas);
         if(vidas == 0)
         {
+
             Destroy(player, 1f);
+            SceneManager.LoadScene("Muerte");
         }
     }
 
