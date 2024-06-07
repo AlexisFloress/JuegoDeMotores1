@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         if(vidas == 0)
         {
 
-            Destroy(player, 1f);
+            Destroy(player, 0.5f);
             SceneManager.LoadScene("Muerte");
         }
     }
@@ -42,9 +42,13 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CargarHabitacion()
     {
-        animator.SetTrigger("End");
-        yield return new WaitForSeconds(1);
-        Debug.Log("Cambio de habitacion");
-        animator.SetTrigger("Start");
+        Debug.Log("Incio de la corrutina");
+        animator.SetBool("End", true);
+        yield return new WaitForSeconds(1.5f);
+        animator.SetBool("End", false);
+        animator.SetBool("Start", true);
+        //animator.SetBool("Start", false);
+        Debug.Log("Fin de la corrutina");
+        
     }
 }

@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         {
 
             GameManager.Instance.PerderVidas();
-            GameManager.Instance.SiguienteHabitacion();
+           
             Debug.Log("Colision con el enemigo");
         }
     }
