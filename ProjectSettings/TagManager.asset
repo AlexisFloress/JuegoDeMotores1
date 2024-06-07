@@ -20,6 +20,7 @@ TagManager:
   - Puerta 10
   - BulletEnemy
   - Obstaculo
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -74,6 +75,9 @@ TagManager:
     locked: 0
   - name: Bullets
     uniqueID: 3242252695
+    locked: 0
+  - name: Boss
+    uniqueID: 4183673471
     locked: 0
   - name: Player
     uniqueID: 3195899831
