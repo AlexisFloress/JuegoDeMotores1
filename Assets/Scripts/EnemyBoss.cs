@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyBoss : MonoBehaviour
 {
     [SerializeField] private int vida = 5;
@@ -12,14 +13,19 @@ public class EnemyBoss : MonoBehaviour
     private float timer;
     public float timeEntreDisparo;
     private float bulletSpeed = 10F;
+    public AudioSource bulletSound;
 
 
-
+    private void Start()
+    {
+        
+    }
 
     void Update()
     {
         Rotacion();
         Disparo();
+       // BossMovimiento();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,6 +37,7 @@ public class EnemyBoss : MonoBehaviour
             if (vida == 0)
             {
                 Destroy(gameObject);
+                GameManager.Instance.CargarCreditos();
             }
 
 
@@ -38,6 +45,12 @@ public class EnemyBoss : MonoBehaviour
 
         Debug.Log("Hay colosion enemigo");
 
+    }
+
+    private void BossMovimiento()
+    {
+       
+        Debug.Log("Se ejecuate el movimiento del jefe");
     }
 
 
@@ -61,7 +74,7 @@ public class EnemyBoss : MonoBehaviour
                 Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
                 rbBullet.velocity = (player.transform.position - transform.position).normalized * bulletSpeed;
                 puedeDisparar = false;
-
+                bulletSound.Play(); 
                 timer = 0;
             }
         }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class BulletEnemy : MonoBehaviour
 {
     private Vector3 mousePos;
-    public GameObject player;
+    private GameObject player;
     private Rigidbody2D rb;
     public float force;
 

@@ -70,9 +70,6 @@ TagManager:
   - name: Puertas
     uniqueID: 2056838119
     locked: 0
-  - name: OverLay
-    uniqueID: 2068759475
-    locked: 0
   - name: Bullets
     uniqueID: 3242252695
     locked: 0
@@ -81,4 +78,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3195899831
+    locked: 0
+  - name: OverLay
+    uniqueID: 2068759475
     locked: 0

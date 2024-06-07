@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Shooting : MonoBehaviour
 {
     private Camera camaraPrincipal;
-    private Vector3 mousePos;
+    public AudioSource Shoot;
 
     public GameObject bullet;
     public Transform bullletTransform;
@@ -47,7 +48,9 @@ public class Shooting : MonoBehaviour
             Instantiate(bullet, bullletTransform.position , bullletTransform.rotation );
             Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
             rbBullet.velocity = (camaraPrincipal.ScreenToWorldPoint(Input.mousePosition) - transform.position ).normalized * bulletSpeed;
+            
             puedeDisparar = false;
+            Shoot.Play();
         }
     }
 }

@@ -12,6 +12,7 @@ public class Enemy_Bullet : MonoBehaviour
     private float timer;
     public float timeEntreDisparo;
     private float bulletSpeed = 10F;
+    public AudioSource bulletSound;
 
    
 
@@ -61,7 +62,7 @@ public class Enemy_Bullet : MonoBehaviour
                 Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
                 rbBullet.velocity = (player.transform.position - transform.position).normalized * bulletSpeed;
                 puedeDisparar = false;
-
+                bulletSound.Play();
                 timer = 0;
             }
         }

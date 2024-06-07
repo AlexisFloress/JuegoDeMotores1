@@ -51,4 +51,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Fin de la corrutina");
         
     }
+
+    public void CargarCreditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
 }
